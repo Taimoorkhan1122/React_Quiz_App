@@ -45,6 +45,8 @@ export default class App extends Component {
           dataSet={this.state.dataset}
           current={this.state.current}
           handleClick={this.handleClick}
+          correct={this.state.correct}
+          incorrect={this.state.incorrect}
         />
         <ScoreArea
           correct={this.state.correct}

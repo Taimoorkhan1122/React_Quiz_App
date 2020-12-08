@@ -2,8 +2,15 @@ import Question from "./Question";
 import AnswerList from "./AnswersList";
 import Message from "./Message";
 
-const QuizArea = ({ isFinished, dataSet, current, handleClick }) => {
-  if (isFinished) return <Message />;
+const QuizArea = ({
+  isFinished,
+  correct,
+  incorrect,
+  dataSet,
+  current,
+  handleClick,
+}) => {
+  if (isFinished) return <Message correct={correct} incorrect={incorrect} />;
   return (
     <div>
       <Question dataSet={dataSet} current={current} />
