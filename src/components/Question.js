@@ -1,8 +1,7 @@
-const Question = ({ dataSet }) => {
-  console.log(dataSet[0]);
+const Question = ({ dataSet, current }) => {
   return (
     <div>
-      <p>Question</p>
+      <p>{dataSet[current].question}</p>
     </div>
   );
 };

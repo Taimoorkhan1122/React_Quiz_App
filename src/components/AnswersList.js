@@ -1,9 +1,10 @@
 import Answer from "./Answer";
 
-const AnswersList = () => {
+const AnswersList = ({ answers }) => {
+  console.log(answers);
   return (
     <div>
-      <Answer />
+      <Answer answer={answers} />
     </div>
   );
 };

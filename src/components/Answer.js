@@ -1,7 +1,10 @@
-const Answer = () => {
+const Answer = ({ Choice, answer }) => {
+  console.log(answer);
   return (
     <div>
-      <p>Answer</p>
+      {answer.map((ans) => (
+        <button className="options">{ans}</button>
+      ))}
     </div>
   );
 };

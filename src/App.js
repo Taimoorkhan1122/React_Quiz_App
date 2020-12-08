@@ -20,6 +20,7 @@ export default class App extends Component {
         <QuizArea
           isFinished={this.state.isFinished}
           dataSet={this.state.dataset}
+          current={this.state.current}
         />
         <ScoreArea />
       </div>
