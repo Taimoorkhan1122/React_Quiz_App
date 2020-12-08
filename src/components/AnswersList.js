@@ -1,10 +1,9 @@
 import Answer from "./Answer";
 
-const AnswersList = ({ answers }) => {
-  console.log(answers);
+const AnswersList = ({ answers, handleClick }) => {
   return (
     <div>
-      <Answer answer={answers} />
+      <Answer answer={answers} handleClick={handleClick} />
     </div>
   );
 };

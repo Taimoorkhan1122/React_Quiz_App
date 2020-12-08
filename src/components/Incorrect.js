@@ -1,7 +1,7 @@
-const Incorrect = () => {
+const Incorrect = ({ incorrect }) => {
   return (
     <div>
-      <h1>Incorrect</h1>
+      <h1>Incorrect: {incorrect}</h1>
     </div>
   );
 };

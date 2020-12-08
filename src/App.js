@@ -12,7 +12,30 @@ export default class App extends Component {
     isFinished: false,
   };
 
-  HandleClick = () => {};
+  handleClick = (choice) => {
+    console.log("fired");
+    // Handling Correct/Incorrect count
+    choice === dataSet[this.state.current].correct
+      ? this.setState((prevState) => ({
+          ...prevState,
+          correct: prevState.correct + 1,
+        }))
+      : this.setState((prevState) => ({
+          ...prevState,
+          incorrect: prevState.incorrect + 1,
+        }));
+
+    // Handling current state and end messsage
+    this.state.current === this.state.dataset.length - 1
+      ? this.setState((prevState) => ({
+          ...prevState,
+          isFinished: true,
+        }))
+      : this.setState((prevState) => ({
+          ...prevState,
+          current: prevState.current + 1,
+        }));
+  };
   render() {
     return (
       <div>
@@ -21,8 +44,12 @@ export default class App extends Component {
           isFinished={this.state.isFinished}
           dataSet={this.state.dataset}
           current={this.state.current}
+          handleClick={this.handleClick}
         />
-        <ScoreArea />
+        <ScoreArea
+          correct={this.state.correct}
+          incorrect={this.state.incorrect}
+        />
       </div>
     );
   }

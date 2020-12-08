@@ -1,11 +1,11 @@
 import Correct from "./Correct";
 import Incorrect from "./Incorrect";
 
-const ScoreArea = () => {
+const ScoreArea = ({ correct, incorrect }) => {
   return (
     <div>
-      <Correct />
-      <Incorrect />
+      <Correct correct={correct} />
+      <Incorrect incorrect={incorrect} />
     </div>
   );
 };
