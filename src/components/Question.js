@@ -1,6 +1,6 @@
 const Question = ({ dataSet, current }) => {
   return (
-    <div>
+    <div className="question">
       <p>{dataSet[current].question}</p>
     </div>
   );

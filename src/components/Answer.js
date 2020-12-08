@@ -1,7 +1,7 @@
 const Answer = ({ answer, handleClick }) => {
   console.log(answer);
   return (
-    <div>
+    <div className="option">
       {answer.map((ans, index) => (
         <button
           key={index}

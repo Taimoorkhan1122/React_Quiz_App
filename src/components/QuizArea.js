@@ -12,13 +12,13 @@ const QuizArea = ({
 }) => {
   if (isFinished)
     return (
-      <>
+      <div className="message">
         <Message correct={correct} incorrect={incorrect} />{" "}
         <button onClick={() => handleClick("play again")}>Play Again</button>
-      </>
+      </div>
     );
   return (
-    <div>
+    <div className="quiz-area">
       <Question dataSet={dataSet} current={current} />
       <AnswerList
         answers={dataSet[current].options}

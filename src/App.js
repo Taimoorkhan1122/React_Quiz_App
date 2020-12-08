@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import QuizArea from "./components/QuizArea";
 import ScoreArea from "./components/ScoreArea";
+
 import dataSet from "./data/QuizData";
+import "./style.css";
 
 export default class App extends Component {
   state = {
@@ -48,7 +50,7 @@ export default class App extends Component {
   };
   render() {
     return (
-      <div>
+      <div className="container">
         <h1>Quiz App</h1>
         <QuizArea
           isFinished={this.state.isFinished}

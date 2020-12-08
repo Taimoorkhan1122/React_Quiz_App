@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    min-height: 100vh;
+    text-align: center;
+    /* background-color: blueviolet; */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+.quiz-area {
+    background-color: rgba(240, 255, 25, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    width: 100%;
+    min-height: 35vh;
+    margin: 0;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.question p {
+    text-align: center;
+    font-size: larger;
+}
+
+.answer-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 136, 25, 0.25);
+    padding: 10px;
+    min-height: 20vh;
+    border-radius: 10px;
+}
+
+button {
+    cursor: pointer;
+    background-color: #fff;
+    outline: none;
+    padding: 0.5rem;
+    margin: 10px;
+    font-size: medium;
+    border:none;
+    border-radius: 5px;
+    transition: transform 100ms ease-in-out;
+    /* box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); */
+}
+ button:hover {
+     color: rgba(255, 136, 25, 0.5);
+     transform: scale(1.15);
+     border: 0.5px solid rgba(255, 136, 25, 1);
+ }
+
+ .score-area {
+     font-size: 0.75rem;
+     background-color: rgba(240, 255, 25, 0.5);
+     width: 100%;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     border-bottom-left-radius: 10px;
+     border-bottom-right-radius: 10px;
+
+ }
+
+ .score-area .correct {
+     transform: scale(1);
+     color: rgba(25, 105, 255, 0.5);
+ }
+
+ .score-area .incorrect {
+     color: rgba(255, 25, 56, 0.5);
+ }
+
+ .message {
+    background-color: rgba(25, 105, 255, 0.5);
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: #fff;
+ }
+
+ .message h3 {
+     margin: 0;
+     padding: 10px;
+     font-size: xx-large;
+ }
+ .message h4 {
+     margin: 0;
+     padding: 10px;
+     font-size: small;
+ }

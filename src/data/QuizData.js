@@ -18,6 +18,15 @@ const dataSet = [
     ],
     correct: 0,
   },
+  {
+    question: "how to group checkbox input elements",
+    options: [
+      "By giving them same name attribute",
+      "Nest all checkboxes inside same label",
+      "use <group > tag",
+    ],
+    correct: 0,
+  },
 ];
 
 export default dataSet;

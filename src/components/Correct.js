@@ -1,6 +1,6 @@
 const Correct = ({ correct }) => {
   return (
-    <div>
+    <div className="correct">
       <h1>Correct: {correct}</h1>
     </div>
   );
