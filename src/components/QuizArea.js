@@ -10,7 +10,13 @@ const QuizArea = ({
   current,
   handleClick,
 }) => {
-  if (isFinished) return <Message correct={correct} incorrect={incorrect} />;
+  if (isFinished)
+    return (
+      <>
+        <Message correct={correct} incorrect={incorrect} />{" "}
+        <button onClick={() => handleClick("play again")}>Play Again</button>
+      </>
+    );
   return (
     <div>
       <Question dataSet={dataSet} current={current} />

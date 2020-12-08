@@ -13,7 +13,17 @@ export default class App extends Component {
   };
 
   handleClick = (choice) => {
-    console.log("fired");
+    console.log(choice);
+    // restarting
+    if (choice === "play again") {
+      return this.setState((prevState) => ({
+        current: 0,
+        dataset: dataSet,
+        correct: 0,
+        incorrect: 0,
+        isFinished: false,
+      }));
+    }
     // Handling Correct/Incorrect count
     choice === dataSet[this.state.current].correct
       ? this.setState((prevState) => ({
